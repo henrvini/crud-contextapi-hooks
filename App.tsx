@@ -1,11 +1,14 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { UsersProvider } from "./src/context/UsersContext";
 
 import StackNavigator from "./src/routes/StackNavigator";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackNavigator />
-    </NavigationContainer>
+    <UsersProvider>
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
+    </UsersProvider>
   );
 }
